@@ -1,0 +1,88 @@
+<van-notify id="van-notify" />
+<view class="contents">
+		<view style="margin-top:30rpx">
+				<view class="lists">
+						<view class="one-grid">
+								<text class="card">身份证信息</text>
+								<view class="scan">
+										<ocr-navigator bind:onSuccess="success" certificateType="idCard" opposite="{{false}}">
+												<text class="fast-scan">{{(name || num) != "" ? rescan:scan}}</text>
+												<van-image src="https://s1.ax1x.com/2020/05/11/YGAvSH.png" width="44rpx" height="44rpx" class="img1"></van-image>
+										</ocr-navigator>
+								</view>
+						</view>
+						<view class="one-grid two-grid">
+								<text class="cell-title">姓名</text>
+								<input type="text" style="font-size:26rpx; color:#666666;width:220rpx" value="{{name}}" placeholder="输入或者扫描" bindchange="onChangeName" placeholder-class="place-holder"></input>
+						</view>
+						<view class="one-grid three-grid">
+								<text class="cell-title">身份证号码</text>
+								<input type="number" pattern="[0-9]*" style="width:400rpx" value="{{num}}" placeholder="输入或者扫描" bindchange="onChangeIdCard" placeholder-class="place-holder"></input>
+						</view>
+							<view class="one-grid">
+								<text class="card">身份证到期时间</text>
+								<view class="scan">
+										<ocr-navigator bind:onSuccess="successSer" certificateType="idCard" opposite="{{true}}">
+												<text class="fast-scan">{{duedate =="" ? scan :rescan}}</text>
+												<van-image src="https://s1.ax1x.com/2020/05/11/YGAvSH.png" width="44rpx" height="44rpx" class="img1"></van-image>
+										</ocr-navigator>
+								</view>
+						</view>
+						<view class="one-grid four-grid">
+								<text class="cell-title">到期时间</text>
+								<input type="text" value="{{duedate}}" bindtap="clickCardDueTime" placeholder="扫描或选择" bindchange="onChangeIdCardExpire"  placeholder-class="place-holder" wx:if="{{inputOneTime}}" style="width:450rpx"></input>
+								<input type="text" value="{{duedate}}" bindchange="onChangeIdCardExpire" wx:if="{{inputTwoTime}}" placeholder="请输入" style="width:450rpx"></input>
+						</view>
+									<van-popup show="{{ shows }}" overlay bind:close="onCancel" position="bottom" duration="300" round>			
+									<van-datetime-picker type="date" value="{{ currentDate }}" bind:input="onInput" max-date="{{ maxDate}}"  bind:confirm="clickExpireTime"  bind:cancel="clickCancelTime" formatter="{{ formatter }}"/>
+								</van-popup>
+				</view>
+				<view class="list-two">
+						<view class="one-grid">
+								<text class="card">银行卡信息</text>
+								<view class="scan">
+										<ocr-navigator bind:onSuccess="bankSuccess" certificateType="bankCard" selectedOptions="{{['bankName','number','validDate']}}">
+												<text class="fast-scan">{{banknum =="" ? scan :rescan}}</text>
+												<van-image src="https://s1.ax1x.com/2020/05/11/YGAvSH.png" width="44rpx" height="44rpx" class="img1"></van-image>
+										</ocr-navigator>
+								</view>
+						</view>
+						<view class="one-grid four-grid">
+								<text class="cell-title">银行卡号</text>
+								<input type="number" pattern="[0-9]*" style="width:350rpx" value="{{banknum}}" placeholder="输入或者扫描" bindchange="onChangeBlankNum" placeholder-class="place-holder"></input>
+						</view>
+				</view>
+				<view class="lists">
+						<view class="one-grid">
+								<text class="cell-title">摊位号</text>
+								<input type="number" style="width:350rpx" placeholder="请输入摊位号" value="{{booth}}" bindchange="onChangeBooth" placeholder-class="place-holder" />
+						</view>
+						<view class="one-grid two-grid">
+								<text class="cell-title">开卡人</text>
+								<input value="{{name}}" placeholder="自动匹配您的姓名" disabled="disabled" style="width:220rpx" bindchange="onChangeOwner" placeholder-class="place-holder" />
+						</view>
+						<view class="one-grid three-grid">
+								<text class="cell-title">法人</text>
+								<input type="text" placeholder="请输入法人" value="{{name}}" style="width:220rpx" bindchange="onChangeLegal" placeholder-class="place-holder" />
+						</view>
+						<view class="one-grid">
+								<text class="cell-title">联系电话</text>
+								<input type="number" pattern="[0-9]*" style="width:230rpx" placeholder="请输入手机号码" value="{{tell}}" bindchange="onChangeTell" placeholder-class="place-holder" />
+						</view>
+						<view class="one-grid four-grid">
+								<text class="cell-title">经营内容</text>
+								<view class="blocks" bindtap="onClickShow">
+										<text>{{optVal}}</text>
+										<van-image src="https://s1.ax1x.com/2020/04/22/JYbERI.png" width="22rpx" height="22rpx"></van-image>
+								</view>
+									
+								<van-popup show="{{ show }}" overlay bind:close="onCancel" position="bottom" duration="300" round>			
+									<van-picker show-toolbar columns="{{columns}}" bind:cancel="onCancel" bind:confirm="onConfirm"  />
+								</van-popup>
+						</view>
+				</view>
+		</view>
+		<view class="footer">
+				<view class="handle-button" bindtap="clickBtn">确认提交</view>
+		</view>
+</view>

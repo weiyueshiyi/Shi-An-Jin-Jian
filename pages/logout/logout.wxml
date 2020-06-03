@@ -1,0 +1,7 @@
+<!--pages/logout/logout.wxml-->
+    <image src="https://s1.ax1x.com/2020/04/24/JBKzCt.png" />
+        <text class="title">食安进件</text>
+        <text class="versions">Version 1.0.1</text>    
+	<view class="footer">
+	  <view class="handle-button logout" bindtap="btnLogout">退出登录</view>
+	</view>

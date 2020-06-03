@@ -1,0 +1,79 @@
+
+<van-notify id="van-notify" />
+<view class="contents">
+  <view style="margin-top:30rpx" wx:for="{{data}}" wx:key="*this">
+    <view class="lists">
+      <view class="one-grid">
+        <text class="card">身份证信息</text>
+        <view class="scan">
+          <ocr-navigator bind:onSuccess="onSuccess" certificateType="idCard" opposite="{{false}}" disabled>
+            <!-- <text class="fast-scan">扫描快速识别</text>
+            <van-image src="https://s1.ax1x.com/2020/04/21/JGnbuT.png" width="44rpx" height="44rpx"  class="img1"></van-image> -->
+          </ocr-navigator>
+        </view>
+      </view>
+      <view class="one-grid two-grid">
+        <text class="con-color">姓名</text>
+        <!-- <input type="text" style="width:200rpx" value="{{item.name}}" bindchange="onChangeName"  disabled="disabled"></input> -->
+        <text class="market-detail">{{item.name =="" || null ? msg : item.name}}</text>
+      </view>
+      <view class="one-grid three-grid">
+        <text  class="con-color">身份证号码</text>
+        <!-- <input type="text" style="width:290rpx" value="{{item.id_card_no}}" disabled="disabled" bindchange="onChangeIdCard" ></input> -->
+        <text class="market-detail">{{item.id_card_no == "" || null ? msg :  item.id_card_no}}</text>
+      </view>
+      <view class="one-grid four-grid">
+        <text class="con-color">身份证到期时间</text>
+        <!-- <input type="text" value="{{item.expiry_time}}" disabled="disabled" bindchange="onChangeIdCardExpire" style="width:150rpx"></input> -->
+        <text class="market-detail">{{item.expiry_time =="" || null ? msg :item.expiry_time}}</text>
+      </view>
+    </view>
+    <view class="list-two">
+      <view class="one-grid">
+        <text class="card">银行卡信息</text>
+        <view class="scan">
+          <ocr-navigator bind:onSuccess="bankSuccess" disabled certificateType="bankCard" selectedOptions="{{['bankName','number','validDate']}}">
+            <!-- <text class="fast-scan">扫描快速识别</text>
+            <van-image src="https://s1.ax1x.com/2020/04/21/JGnbuT.png" width="44rpx" height="44rpx" class="img1"></van-image> -->
+          </ocr-navigator>
+        </view>
+      </view>
+      <view class="one-grid four-grid">
+        <text  class="con-color">银行卡号</text>
+        <!-- <input type="text" style="width:290rpx" value="{{item.bank_account}}"  disabled="disabled" bindchange="onChangeBlankNum"></input> -->
+        <text  class="market-detail">{{item.bank_account ==""|| null ? msg :item.bank_account}}</text>
+      </view>
+    </view>
+    <view class="lists">
+      <view class="one-grid">
+        <text class="con-color">摊位号</text>
+        <!-- <input type="text" style="width:350rpx" disabled="disabled" value="{{item.customCode}}" bindchange="onChangeBooth" /> -->
+        <text class="market-detail">{{item.customCode ==""|| null ? msg :item.customCode}}</text>
+      </view>
+      <view class="one-grid two-grid">
+        <text  class="con-color">开卡人</text>
+        <!-- <input value="{{item.owner}}" /> -->
+          <text class="market-detail">{{item.owner ==""|| null ? msg :item.owner}}</text>
+      </view>
+      <view class="one-grid three-grid">
+        <text  class="con-color">法人</text>
+        <!-- <input type="text"  disabled="disabled" value="{{item.owner}}" bindchange="onChangeLegal" /> -->
+          <text class="market-detail">{{item.owner =="" || null ? msg :item.owner}}</text>
+      </view>
+      <view class="one-grid">
+        <text  class="con-color">联系电话</text>
+        <!-- <input type="text" style="width:210rpx" disabled="disabled" value="{{item.mobile}}" bindchange="onChangeTell" /> -->
+                <text class="market-detail">{{item.mobile =="" || null ? msg :item.mobile}}</text>
+      </view>
+      <view class="one-grid four-grid">
+        <text  class="con-color">经营内容</text>
+        <view class="blocks" bindtap="clickPicker">
+          <text  class="market-detail" style="margin-right:4rpx;">{{item.type_name=="" || null ? msg :item.type_name}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="footer">
+    <view class="handle-button" bindtap="clickBtn">返回商户列表</view>
+  </view>
+</view>

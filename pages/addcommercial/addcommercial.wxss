@@ -1,0 +1,52 @@
+page {
+  background: #1C162E;
+}
+.contents {
+  width: 100%;
+  height: 1660rpx;
+  overflow: hidden;
+}
+input{
+  font-size:26rpx;
+   color:#fff;
+  width: 100rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+  text-align:right
+}
+.place-holder{
+  font-size:26rpx;
+  color:#A29CB1;
+}
+.cell-title{
+  color:#fff;
+  font-size: 28rpx;
+}
+.blocks{
+  width: 500rpx;
+  text-align: right;
+}
+.blocks text{
+  font-size: 26rpx;
+  color: #fff;
+  margin-right: 4rpx;
+}
+
+/* .blocks van-image {
+  position: absolute;
+  right: 78rpx;
+  top: 1322rpx;
+} */
+.footer {
+  width: 100%;
+  height: 200rpx;
+  background:rgba(44,37,62,1);
+  box-shadow:0px 4px 20px 0px rgba(0,0,0,0.4);
+  border-radius:24px 24px 0px 0px;
+  position: fixed;
+  bottom: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

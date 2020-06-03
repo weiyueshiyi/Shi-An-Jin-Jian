@@ -1,0 +1,5 @@
+<!--index.wxml-->
+<van-image round src="https://s1.ax1x.com/2020/04/21/JGmCJ1.png" width="156rpx" height="156rpx" class="logo"></van-image>
+<view class="title">欢迎使用食安进件</view>
+<!-- <button class="login-btn" open-type="getUserInfo"  bindgetuserinfo="getLogin">微信快速登录</button> -->
+<view class="handle-button button" bindtap="onLogin">手机号一键登录</view>

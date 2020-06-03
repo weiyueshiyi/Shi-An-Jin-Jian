@@ -1,0 +1,39 @@
+<view class="nav">
+  <view class="nav-title">
+  <van-image src="https://s1.ax1x.com/2020/05/11/YGtfhQ.png" bindtap="onLogout" class="log" width="50rpx" height="50rpx"></van-image>
+    <text>我的市场</text>
+  </view>
+</view>
+ 
+<view class="search-market" style="box-shadow:{{boxshadow}};margin-top:{{top}};transition:{{transition}}">
+  <input type="text" placeholder="输入市场名称搜索"  placeholder-class="place-holder" value="{{value}}" bindinput='searchInput' bindconfirm="clickSearch"></input>
+  <view>
+    <van-image src="https://s1.ax1x.com/2020/05/10/Y8dq6s.png" width="36rpx" height="36rpx" bindtap="clickSearch"></van-image>
+  </view>
+</view>
+<view class="content" wx:if="{{content}}">
+  <view style="margin-top:150rpx">
+    <view class="list" wx:for="{{data}}" bindtap="clickMarketDetail" data-myname="{{item.name}}" data-myid="{{item.id}}" wx:key="index">
+      <text>{{item.name}}</text>
+      <view class="information">
+        <text data-myname="{{item.name}}" data-myid="{{item.id}}">
+          市场信息
+        </text>
+        <van-image src="https://s1.ax1x.com/2020/05/10/Y8D8BR.png" width="16rpx" height="16rpx" data-myname="{{item.name}}" data-myid="{{item.id}}"></van-image>
+      </view>
+    </view>
+    <van-loading size="24px" color="#63E2B1" wx:if="{{loading}}" class="loading">
+      加载中...
+    </van-loading>
+    <view class="null" wx:if="{{nulls}}">暂无数据</view>
+  </view>
+  <view class="footer">
+    <view class="handle-button" bindtap="addMarket">添加市场信息</view>
+  </view>
+</view>
+<view class="img" wx:if="{{img}}">
+  <view>
+    <van-image src="https://s1.ax1x.com/2020/05/11/YGQ9ne.png" width="418rpx" height="288rpx"></van-image>
+  </view>
+  <view style="margin-left:150rpx;color:#fff">暂无内容</view>
+</view>

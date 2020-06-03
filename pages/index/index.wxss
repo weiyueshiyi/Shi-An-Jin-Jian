@@ -1,0 +1,86 @@
+/* pages/phonecode/phonecode.wxss */
+page{
+  background:linear-gradient(180deg,rgba(46,53,75,1) 0%,rgba(28,22,46,1) 100%);
+}
+.title{
+  position: absolute;
+  top: 200rpx;
+  left: 30rpx;
+}
+.login-input{
+  margin-top: 210rpx;
+}
+.line{
+  margin-left:80rpx;
+  width: 550rpx;
+  background: #fff;
+  opacity: 0.1;
+  margin-top:10rpx
+}
+.place-holder{
+  color: #A29CB1;
+  font-size:28rpx;
+}
+.cancel-icon{
+  margin-top:50rpx ;
+}
+.phone,.code-demo{
+  width: 610rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-left:50rpx;
+}
+.phone>van-image:first-child,.code-demo>van-image:first-child{
+  margin-left: -46rpx;
+  margin-top: 44rpx;
+}
+.phone-code,.code{
+  width: 550rpx;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+input{
+  color: #fff;
+  font-size: 28rpx;
+  width: 400rpx;
+  padding-bottom:20rpx ;
+  margin-top:50rpx;
+  font-size:34rpx;
+}
+.code-demo{
+  margin-top:10rpx;
+}
+.send-code{
+  margin-top:30rpx ;
+  font-size: 26rpx;
+  width: 172rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+   text-align: center;
+  font-size: 22rpx;
+  background:#303146 !important; 
+border-radius:30px;
+}
+.button{
+  width: 550rpx;
+  margin-top:100rpx ;
+}
+.btn{
+width: 144rpx;
+height: 121rpx;
+position: absolute;
+left: 40%;
+top: 57.5%;
+opacity: 0;
+}
+.button-phone{
+  margin-top:250rpx ;
+}
+.Affiche{
+  position: absolute;
+  bottom: 36rpx;
+  color: #6B657A;
+  font-size: 24rpx;
+}

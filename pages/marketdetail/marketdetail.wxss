@@ -1,0 +1,82 @@
+/* pages/marketdetail/marketdetail.wxss */
+page {
+  background: #1C162E;
+}
+.containers {
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding-bottom: 10rpx;
+}
+input {
+  width: 600rpx;
+  text-align: left;
+  margin-left: 30rpx;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  color: #fff;
+}
+.search van-image{
+  position: absolute;
+  top: 26rpx;
+  right: 0rpx;
+}
+.name-list{
+  width: 690rpx;
+  height: 154rpx;
+  background:rgba(44,37,62,0.6);
+  border-radius:24rpx ;
+  margin-left: 30rpx;
+  margin-top:20rpx ;
+}
+.name-list .one-cell,.two-cell{
+  display: flex;
+  justify-content:space-between;
+}
+.name-list .one-cell text:first-child{
+  margin-left:30rpx;
+  color: #fff;
+  font-weight:bold;
+  font-size: 30rpx;
+  margin-top:27rpx;
+}
+.name-list .one-cell text:last-child{
+   margin-right:30rpx;
+   color: #1FE7EB;
+   font-size: 28rpx;
+   font-weight:400;
+   margin-top:27rpx;
+}
+.name-list .two-cell text{
+  color: #A29CB1;
+  font-size: 28rpx;
+  margin-top:25rpx ;
+  margin-left:30rpx;
+}
+.place-holder{
+  font-size: 28rpx;
+  color: #6B657A;
+}
+.delete{
+  margin-top:55rpx;
+  margin-left:20rpx ;
+}
+.null{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 400rpx;
+}
+.footer {
+  width: 100%;
+  height: 200rpx;
+  background:rgba(44,37,62,1);
+  box-shadow:0px 4px 20px 0px rgba(0,0,0,0.4);
+ border-radius:24px 24px 0px 0px;
+  position: fixed;
+  bottom: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

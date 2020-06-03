@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/addcommercial/addcommercial",
+    
+    "pages/addmarket/addmarket",
+    
+    "pages/marketdetail/marketdetail",
+    "pages/mymarket/mymarket",  
+    "pages/returnmarket/returnmarket",
+    "pages/Merchdetails/Merchdetails",
+    "pages/logout/logout",
+    "pages/treaty/treaty",
+    "pages/logs/logs"
+  ],
+  "plugins": {
+    "ocr-plugin": {
+      "version": "3.0.3",
+      "provider": "wx4418e3e031e551be"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#ffffff"
+  },
+  "usingComponents": {
+    "van-image": "@vant/weapp/image",
+    "van-button": "@vant/weapp/button",
+    "van-cell":"@vant/weapp/cell",
+    "van-search":"@vant/weapp/search",
+    "van-popup": "@vant/weapp/popup",
+    "van-swipe-cell": "@vant/weapp/swipe-cell",
+    "van-dialog":"@vant/weapp/dialog",
+    "van-uploader":"@vant/weapp/uploader",
+    "van-dropdown-menu":"@vant/weapp/dropdown-menu",
+    "van-dropdown-item":"@vant/weapp/dropdown-item",
+    "van-notify":"@vant/weapp/notify",
+    "van-loading": "@vant/weapp/loading",
+    "van-picker": "@vant/weapp/picker",
+    "van-area": "@vant/weapp/area",
+     "van-overlay": "@vant/weapp/overlay",
+     "van-datetime-picker": "@vant/weapp/datetime-picker"
+  },
+  "sitemapLocation": "sitemap.json"
+}

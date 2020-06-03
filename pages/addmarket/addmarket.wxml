@@ -1,0 +1,40 @@
+
+<view class="contents">
+	<view style="margin-top:30rpx">
+		<view class="lists">
+			<view class="market-msg">
+				市场信息
+			</view>
+			<view class="market-name">
+				<text>市场名称</text>
+				<input  type="text" value="{{name}}" placeholder="请输入市场名" placeholder-class="place-holder" bindinput="inputMarket"></input>
+						
+			</view>
+								<scroll-view class="search-data" scroll-y wx:if="{{searchData}}">
+							<view wx:for="{{options1}}" wx:key="*this" bindtap="clickOption" data-name="{{item.name}}" data-charge="{{item.charge}}" data-tel="{{item.tel}}" data-id="{{item.id}}">
+									<text style="color:#fff">{{item.name}}</text>
+							</view>
+					</scroll-view>
+							<view class="market-name">
+						<text>商铺摊位数</text>
+						<input type="text" value="{{booths}}" placeholder="请输入摊位号" placeholder-class="place-holder" bindinput="inputBooths"></input>
+				</view>
+									<view class="market-name">
+							<text>市场管理员</text>
+							<input type="text" value="{{charge}}" placeholder="请输入管理员姓名" bindinput="inputAdmin" placeholder-class="place-holder"></input>
+					</view>
+											<view class="market-name" style="border:none">
+								<text>管理员电话</text>
+								<input type="number" value="{{admintell}}" placeholder="请输入管理员电话" bindinput="inputAdminTell" placeholder-class="place-holder"></input>
+						</view>
+		</view>
+	</view>
+  <view class="business">
+	<view class="business-title">市场营业执照</view>
+		<van-uploader max-count="2" file-list="{{ fileList }}" bind:after-read="afterRead" bind:delete="clickDelete" class="uploader" />
+	</view>
+			<van-notify id="van-notify" />
+	<view class="footer" wx:if="{{btn}}">
+		<view class="handle-button" bindtap="clickBtn">确认提交</view>
+	</view>
+</view>

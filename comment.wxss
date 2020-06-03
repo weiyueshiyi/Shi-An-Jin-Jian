@@ -1,0 +1,123 @@
+
+  .content {
+    width: 100%;
+    overflow: hidden;
+    /* margin-top: 10rpx; */
+    padding-bottom: 200rpx;
+  }
+
+  .search,.list {
+    width: 690rpx;
+    background:rgba(44,37,62,0.6);
+    margin-top: 24rpx;
+    margin-left: 30rpx;
+    border-radius: 24rpx;
+  }
+  
+  .search {
+    height: 88rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+  }
+
+  .list {
+    height: 154rpx;
+  }
+  .lists,
+  .list-two {
+    width: 690rpx;
+    background:rgba(44,37,62,0.6);
+    margin-top: 24rpx;
+    margin-left: 30rpx;
+    border-radius: 24rpx;
+    letter-spacing: 3rpx;
+  }
+
+  .picker {
+    width: 100rpx;
+    height: 20rpx;
+    background-color: #00CF96;
+  }
+
+.one-grid {
+    width: 630rpx;
+    height: 110rpx;
+    margin-left: 29rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 0.5rpx solid rgba(67, 61, 85, 0.8);
+  }
+.four-grid {
+  border: none;
+}
+.one-grid .card {
+  color: #fff;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.scan {
+  display: flex;
+}
+
+.scan .img1 {
+  position: absolute;
+  right: 60rpx;
+}
+.scan .fast-scan {
+  margin-right: 55rpx;
+  color: #1FE7EB;
+  font-size: 26rpx;
+}
+.handle-button {
+  width: 660rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  background:linear-gradient(135deg,rgba(45,201,235,1) 0%,rgba(20,210,184,1) 100%);
+box-shadow:0px 5px 20px 0px rgba(0,253,255,0.25);
+  border-radius: 50rpx;
+  font-size: 36rpx;
+  font-weight: 500;
+  text-align: center;
+  color: #fff;
+  margin-bottom:35rpx ;
+}
+
+.information {
+  width: 150rpx;
+  height: 50rpx;
+  background:rgba(255,255,255,0.04);
+/* opacity:0.04; */
+  font-size: 24rpx;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  border-radius: 12rpx;
+  color: #1FE7EB;
+  margin-left: 30rpx;
+  position: absolute;
+  margin-top: 80rpx;
+}
+
+.information text {
+  margin-top: -33rpx;
+  margin-left: 18rpx
+}
+.information van-image{
+  margin-bottom:6rpx ;
+  margin-left: 4rpx;
+}
+.img {
+  position: absolute;
+  top: 36%;
+  left: 24%;
+}
+
+.loading {
+  margin-left: 300rpx;
+}

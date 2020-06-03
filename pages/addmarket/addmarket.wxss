@@ -1,0 +1,101 @@
+/* pages/addmarket/addmarket.wxss */
+page {
+  background: #1C162E;
+}
+.lists{
+  width: 690rpx;
+  height: 540rpx;
+  background:rgba(44,37,62,0.6);
+  margin-top: 24rpx;
+  margin-left: 30rpx;
+  border-radius:24rpx ;
+  letter-spacing: 3rpx;
+}
+.place-holder{
+  font-size:26rpx;
+  color:#6B657A;
+}
+.market-name{
+  border-bottom: 1rpx solid #433D55;
+}
+.market-msg,
+.market-name,
+.business-title {
+  width: 630rpx;
+  height: 110rpx;
+  margin-left: 29rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.market-name input{
+  width: 460rpx;
+  font-size:26rpx;
+  text-align: right;
+  color: #FFFFFF;
+}
+.market-name text{
+  font-size: 28rpx;
+  color: #FFFFFF;
+}
+.market-msg,
+.business-title {
+   font-size: 30rpx;
+  border-bottom: 1rpx solid #433D55;
+  font-weight: bold;
+   color: #FFFFFF;
+}
+.search-data{
+  width: 690rpx;
+  height: 680rpx;
+  margin-left:30rpx ;
+  margin-top: 20rpx;
+  background: #2C253E;
+  border-radius:24rpx;
+  position: fixed;
+  top: 10;
+  right: 30rpx;
+  z-index: 999;
+  box-shadow: 0rpx 0rpx 10rpx 0rpx #d0d0d0;
+}
+.search-data view{
+  width: 690rpx;
+  margin-left:30rpx;
+  border-bottom:1rpx solid #433D55 ;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size:26rpx ;
+}
+.business{
+  width: 690rpx;
+  height: 344rpx;
+  background:rgba(44,37,62,0.6);
+  margin-top: 24rpx;
+  margin-left: 30rpx;
+  border-radius:24rpx ;
+}
+/* .uploader{
+  position: relative;
+  bottom:-20rpx;
+  left: 30rpx;
+} */
+.img-v{
+  width: 160rpx;
+  height: 160rpx;
+}
+.footer {
+  width: 100%;
+  height: 200rpx;
+  background:rgba(44,37,62,1);
+  box-shadow:0px 4px 20px 0px rgba(0,0,0,0.4);
+ border-radius:24px 24px 0px 0px;
+  position: fixed;
+  bottom: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.market{
+  background: red;
+}

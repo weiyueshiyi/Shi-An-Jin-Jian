@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "ocr-navigator": "plugin://ocr-plugin/ocr-navigator"
+  },
+  "navigationBarTitleText": "添加商户信息",
+  "navigationBarTextStyle": "white",
+  "navigationBarBackgroundColor": "#201A32"
+}
